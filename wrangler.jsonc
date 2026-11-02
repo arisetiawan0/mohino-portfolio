@@ -11,8 +11,10 @@
     // Alamat yang tidak ada memakai out/404.html ("Struk tidak ditemukan")
     "not_found_handling": "404-page"
   },
-  // Alamat percobaan <nama>.<akun>.workers.dev, tetap aktif sampai domain tersambung.
-  "workers_dev": true
+  // Disamakan dengan dashboard. Situs utama hanya di mohino.web.id (tidak ada salinan
+  // di workers.dev), tapi tiap branch/PR tetap dapat Preview URL di workers.dev.
+  "workers_dev": false,
+  "preview_urls": true
   // Custom domain mohino.web.id dipasang lewat dashboard (Worker > Domains), bukan di
   // sini, jadi "routes" sengaja tidak diisi. `wrangler deploy` tidak menghapus domain
   // yang dipasang di dashboard. www.mohino.web.id dialihkan ke domain utama lewat
