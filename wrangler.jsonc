@@ -1,0 +1,20 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  // Worker berisi aset statis saja (hasil `next build` di out/). Tanpa skrip:
+  // request ke aset tidak dihitung sebagai pemanggilan Worker.
+  "name": "mohino-portfolio",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./out",
+    // /proyek/portal-promo melayani proyek/portal-promo.html
+    "html_handling": "auto-trailing-slash",
+    // Alamat yang tidak ada memakai out/404.html ("Struk tidak ditemukan")
+    "not_found_handling": "404-page"
+  },
+  // Alamat percobaan <nama>.<akun>.workers.dev, tetap aktif sampai domain tersambung.
+  "workers_dev": true
+  // Aktifkan setelah mohino.web.id aktif di Cloudflare (nameserver sudah dipindah).
+  // www tidak dipasang di sini: www.mohino.web.id dialihkan ke domain utama lewat
+  // Redirect Rule di dashboard (template "Redirect from WWW to root").
+  // "routes": [{ "pattern": "mohino.web.id", "custom_domain": true }]
+}

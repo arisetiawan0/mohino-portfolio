@@ -1,0 +1,14 @@
+node_modules
+.next
+out
+*.tsbuildinfo
+next-env.d.ts
+.DS_Store
+.wrangler
+
+# Data pribadi: nomor HP dan CV versi lamaran tidak masuk repo publik.
+cv-builder/private.json
+cv-builder/Ari-Setiawan-CV.pdf
+cv-builder/.cv-*.html
+# Draf kerja CV (memuat nomor HP); sumber CV yang dipakai: cv-builder/cv.html
+CV-update-draft.md
