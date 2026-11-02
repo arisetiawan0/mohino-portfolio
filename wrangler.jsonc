@@ -13,8 +13,8 @@
   },
   // Alamat percobaan <nama>.<akun>.workers.dev, tetap aktif sampai domain tersambung.
   "workers_dev": true
-  // Aktifkan setelah mohino.web.id aktif di Cloudflare (nameserver sudah dipindah).
-  // www tidak dipasang di sini: www.mohino.web.id dialihkan ke domain utama lewat
+  // Custom domain mohino.web.id dipasang lewat dashboard (Worker > Domains), bukan di
+  // sini, jadi "routes" sengaja tidak diisi. `wrangler deploy` tidak menghapus domain
+  // yang dipasang di dashboard. www.mohino.web.id dialihkan ke domain utama lewat
   // Redirect Rule di dashboard (template "Redirect from WWW to root").
-  // "routes": [{ "pattern": "mohino.web.id", "custom_domain": true }]
 }
